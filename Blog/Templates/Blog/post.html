@@ -1,0 +1,15 @@
+{% extends 'blog/index.html' %}
+
+{% load static %}
+
+{% block title %} {{posts_detalle.titulo}} {% endblock title %}
+
+{% block image %} {{posts_detalle.imagen}} {% endblock image %}
+
+
+{% block main_title_detail %} {{posts_detalle.titulo}} {% endblock main_title_detail %}
+{% block subtitle_detail %}  {{posts_detalle.descripcion}} {% endblock subtitle_detail %}
+
+{% block content %}
+{{posts_detalle.contenido | safe}}
+{% endblock content %}
